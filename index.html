@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Studio Fugura Lublin</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 
   <!-- SCRIPTS -->
   <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
@@ -17,14 +18,14 @@
 <body>
 
   <!-- NAVIGATION START -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Brand</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse " id="navbarText">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse ml-auto" id="navbarText">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="#">Home</a>
         </li>
@@ -47,38 +48,73 @@
           <a class="nav-link" href="#">Kontakt</a>
         </li>
       </ul>
-
     </div>
-    <!-- NAVIGATION END -->
+  </nav>
+  <!-- NAVIGATION END -->
 
-    <!-- MAIN START -->
-    <div class="container-fluid">
+  <!-- MAIN START -->
+  <main>
+    <!--HERO SECTION-->
+    <section id="hero" class="container-fluid">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-item-1"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Welcome</h5>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-item-1"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-item-1"></div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <section id='second'>
+
+    </section>
+
+  </main>
+  <!-- MAIN END -->
+  <!-- FOOTER START  -->
 
 
-      <!-- MAIN END -->
-      <!-- FOOTER START  -->
-
-
-      <!-- FOOTER END -->
+  <!-- FOOTER END -->
 
 
 
 
 
 
-    </div>
 
-
-    <!-- Android stock browser -->
-    <script>
-      $(function () {
-        var nua = navigator.userAgent
-        var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
-        if (isAndroid) {
-          $('select.form-control').removeClass('form-control').css('width', '100%')
-        }
-      })
-    </script>
+  </div>
+  <!-- Android stock browser -->
+  <script>
+    $(function () {
+      var nua = navigator.userAgent
+      var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
+      if (isAndroid) {
+        $('select.form-control').removeClass('form-control').css('width', '100%')
+      }
+    })
+  </script>
 </body>
 
 </html>

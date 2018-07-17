@@ -1,0 +1,12 @@
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item-1 {
+    background: url(../img/girls-2281978_1280.jpg) no-repeat center center fixed;
+    width: auto;
+    height: 100vh;
+    background-size: cover;
+
+}
