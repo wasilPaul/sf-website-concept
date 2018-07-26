@@ -1,12 +1,25 @@
+:root {
+    --sf-primary-color: rgb(239, 124, 0);
+    --sf-dark-color: rgb(23, 23, 23);
+}
+
+.nav-link-sf-brand {
+    background: var(--sf-dark-color);
+    color: var(--sf-primary-color);
+}
+
 .container-fluid {
     margin: 0;
     padding: 0;
 }
 
-.carousel-item-1 {
+.carousel-item-img {
     background: url(../img/girls-2281978_1280.jpg) no-repeat center center fixed;
     width: auto;
     height: 100vh;
     background-size: cover;
+}
 
+#second {
+    height: 100vh;
 }
