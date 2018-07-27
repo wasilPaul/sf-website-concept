@@ -5,11 +5,47 @@
     --sf-dark-color: rgb(0, 0, 0);
 }
 
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
 .navbar {
     -webkit-box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
     -moz-box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
     box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
     background-color: var(--sf-dark-color);
+}
+
+.navbar__contact {
+    position: absolute;
+    z-index: 1001;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    padding: 5px 40px 0 0;
+}
+
+.navbar__contact__box {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__contact-icon {
+    font-size: 0.5rem;
+    margin: 0 5px;
+}
+
+.navbar__contact__description {
+    font-size: 0.8rem;
+    /* border-right: solid var(--sf-primary-color) 1px; */
+    padding-right: 5px;
+    color: var(--sf-primary-color)
 }
 
 .navbar-brand-logo {
@@ -25,15 +61,17 @@
 .nav-link-sf-brand {
     color: var(--sf-standard-color);
     font-size: 1rem;
-    -webkit-transition: all  0.5s ease-out;
-    -moz-transition: all  0.5s ease-out;
-    -o-transition: all 0.5s  ease-out;
-    transition: all 0.5s  ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .nav-link-sf-brand:hover {
     color: var(--sf-primary-color);
 }
+
+/* NAVBAR-END */
 
 .container-fluid {
     margin: 0;
@@ -49,4 +87,30 @@
 
 #second {
     height: 100vh;
+}
+
+@media (max-width: 767.98px) {
+    .navbar__contact {
+        position: relative;
+        z-index: 1001;
+        display: flex;
+        justify-content: center;
+   
+        margin: auto;
+        width: 100%;
+        top: 0;
+        padding: 0;
+        background: rgb(245, 171, 91);
+    }
+    .navbar__contact-icon {
+        font-size: 0.3rem;
+        margin: 0 5px;
+        fill: var(--sf-dark-color);
+        -webkit-text-fill-color: var(--sf-dark-color);
+    }
+    .navbar__contact__description {
+        font-size: 0.7rem;
+        padding: 0;
+        color: var(--sf-dark-color)
+    }
 }
