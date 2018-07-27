@@ -1,10 +1,37 @@
 :root {
+    --sf-standard-color: rgb(235, 235, 235);
     --sf-primary-color: rgb(239, 124, 0);
-    --sf-dark-color: rgb(23, 23, 23);
+    --sf-primary-color-shadow: rgba(239, 124, 0, 0.75);
+    --sf-dark-color: rgb(0, 0, 0);
+}
+
+.navbar {
+    -webkit-box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
+    -moz-box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
+    box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
+    background-color: var(--sf-dark-color);
+}
+
+.navbar-brand-logo {
+    max-width: 5rem;
+    height: auto;
+    margin-left: 20%;
+}
+
+.nav-item {
+    padding: 5px 5px;
 }
 
 .nav-link-sf-brand {
-    background: var(--sf-dark-color);
+    color: var(--sf-standard-color);
+    font-size: 1rem;
+    -webkit-transition: all  0.5s ease-out;
+    -moz-transition: all  0.5s ease-out;
+    -o-transition: all 0.5s  ease-out;
+    transition: all 0.5s  ease-out;
+}
+
+.nav-link-sf-brand:hover {
     color: var(--sf-primary-color);
 }
 
@@ -14,7 +41,7 @@
 }
 
 .carousel-item-img {
-    background: url(../img/girls-2281978_1280.jpg) no-repeat center center fixed;
+    background: url(../img/sport-2245029_1280.jpg) no-repeat center top fixed;
     width: auto;
     height: 100vh;
     background-size: cover;
