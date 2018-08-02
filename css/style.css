@@ -1,8 +1,18 @@
 :root {
     --sf-standard-color: rgb(235, 235, 235);
     --sf-primary-color: rgb(239, 124, 0);
-    --sf-primary-color-shadow: rgba(239, 124, 0, 0.75);
-    --sf-dark-color: rgb(0, 0, 0);
+    --sf-primary-color-shadow: rgba(239, 124, 0, 0.1);
+    --sf-dark-color: rgba(0, 0, 0);
+    --sf-dark-color-background: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background: rgba(24, 24, 26, 1)
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
 }
 
 /* NAVBAR */
@@ -17,7 +27,7 @@ nav {
     -webkit-box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
     -moz-box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
     box-shadow: 0px 0px 4px 1px var(--sf-primary-color-shadow);
-    background-color: var(--sf-dark-color);
+    background-color: var(--sf-dark-color-background);
 }
 
 .navbar__contact {
@@ -71,12 +81,13 @@ nav {
     color: var(--sf-primary-color);
 }
 
+.flaticon-menu {
+    font-size: 1.1rem;
+}
+
 /* NAVBAR-END */
 
-.container-fluid {
-    margin: 0;
-    padding: 0;
-}
+/* HERO */
 
 .carousel-item-img {
     background: url(../img/sport-2245029_1280.jpg) no-repeat center top fixed;
@@ -89,13 +100,38 @@ nav {
     height: 100vh;
 }
 
+.carusele-item__caption {
+    position: fixed;
+    margin: 25vh 0 0 10vw;
+    width: 10em;
+    height: 10em;
+    border: 4px var(--sf-primary-color) solid;
+    color: var(--sf-standard-color);
+    background-color: var(--sf-primary-color-shadow);
+}
+
+.carusele-item__caption-top {
+    margin: 50% 0 0 25%;
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 300%;
+}
+
+/* HERO-END */
+#koncept {
+    min-height: 100vh;
+}
+
+
 @media (max-width: 767.98px) {
+    .navbar-brand-logo {
+        max-width: 3rem;
+    }
     .navbar__contact {
         position: relative;
         z-index: 1001;
         display: flex;
         justify-content: center;
-   
         margin: auto;
         width: 100%;
         top: 0;
@@ -112,5 +148,14 @@ nav {
         font-size: 0.7rem;
         padding: 0;
         color: var(--sf-dark-color)
+    }
+    /* NAVBAR-END */
+
+    .carusele-item__caption {
+        width: 5em;
+        height: 5em;
+    }
+    .carusele-item__caption-top {
+        font-size: 1.5em;
     }
 }
